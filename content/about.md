@@ -10,4 +10,7 @@ AI 专业背景。比起单个事件,我对「世界如何运行」更感兴趣�
 
 这个博客记录我在技术、商业与社会交叉处的观察与思考,大部分时候从一个问题开始:为什么。
 
+## 找到我
+
+- 小红书: [一只老红薯](https://www.xiaohongshu.com/user/profile/6301d55f0000000012001c6a)
 - GitHub: [github.com/xiaogongzhuuu](https://github.com/xiaogongzhuuu)
