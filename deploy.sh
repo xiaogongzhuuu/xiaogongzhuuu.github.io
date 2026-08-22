@@ -9,8 +9,8 @@ hugo --gc --minify
 DEPLOY_DIR="$(mktemp -d)"
 trap 'rm -rf "$DEPLOY_DIR"' EXIT
 
-# 取出 publish 分支(首次部署则新建空仓库)
-if git rev-parse --verify --quiet origin/publish >/dev/null 2>&1; then
+# 取出 publish 分支(远端没有则新建空仓库)
+if git ls-remote --heads origin publish 2>/dev/null | grep -q publish; then
   git clone -q --depth 1 --branch publish "$(git remote get-url origin)" "$DEPLOY_DIR"
 else
   git -C "$DEPLOY_DIR" init -q
