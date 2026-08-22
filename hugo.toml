@@ -1,7 +1,7 @@
 baseURL = 'https://xiaogongzhuuu.github.io/'
 locale = 'zh-cn'
 defaultContentLanguage = 'zh-cn'
-title = "xiaogongzhuuu's Blog"
+title = '一只老红薯'
 theme = 'PaperMod'
 
 enableRobotsTXT = true
@@ -23,7 +23,7 @@ ShowWordCount = true
 ShowToc = true
 
 [params.homeInfoParams]
-Title = '你好 👋'
+Title = '你好,我是一只老红薯 👋'
 Content = '探索AI浪潮中的人性、秩序与未来。'
 
 [[params.socialIcons]]
