@@ -3,7 +3,7 @@ title = 'Hello, World'
 date = '2026-08-22T00:00:00+08:00'
 draft = false
 tags = ['随笔']
-categories = []
+categories = ['随笔']
 +++
 
 这个博客今天开张了 🎉

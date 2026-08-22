@@ -13,6 +13,7 @@ tag = 'tags'
 
 [params]
 env = 'production'
+description = '在技术、商业与社会的交叉处,观察变化,记录思考。'
 ShowReadingTime = true
 ShowShareButtons = true
 ShowPostNavLinks = true
@@ -23,7 +24,7 @@ ShowToc = true
 
 [params.homeInfoParams]
 Title = '你好 👋'
-Content = '关于 AI、社会与商业的观察和思考。'
+Content = '在技术、商业与社会的交叉处,观察变化,记录思考。'
 
 [[params.socialIcons]]
 name = 'GitHub'
