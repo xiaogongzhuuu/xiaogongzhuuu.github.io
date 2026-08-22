@@ -9,15 +9,16 @@ hugo --gc --minify
 DEPLOY_DIR="$(mktemp -d)"
 trap 'rm -rf "$DEPLOY_DIR"' EXIT
 
-# 取出 publish 分支(首次部署则创建空分支)
+# 取出 publish 分支(首次部署则新建空仓库)
 if git rev-parse --verify --quiet origin/publish >/dev/null 2>&1; then
-  git worktree add -q -B publish "$DEPLOY_DIR" origin/publish
+  git clone -q --depth 1 --branch publish "$(git remote get-url origin)" "$DEPLOY_DIR"
 else
-  git worktree add -q --orphan "$DEPLOY_DIR" publish
+  git -C "$DEPLOY_DIR" init -q
+  git -C "$DEPLOY_DIR" checkout -q --orphan publish
+  git -C "$DEPLOY_DIR" remote add origin "$(git remote get-url origin)"
 fi
 
 # 清空旧内容,写入新的构建产物
-git -C "$DEPLOY_DIR" rm -rq --ignore-unmatch . 2>/dev/null || true
 find "$DEPLOY_DIR" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
 cp -R public/. "$DEPLOY_DIR"/
 touch "$DEPLOY_DIR/.nojekyll"
