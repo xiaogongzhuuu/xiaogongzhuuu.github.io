@@ -1,0 +1,45 @@
+baseURL = 'https://xiaogongzhuuu.github.io/'
+locale = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+title = "xiaogongzhuuu's Blog"
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+paginate = 8
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+
+[params]
+env = 'production'
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowToc = true
+
+[params.homeInfoParams]
+Title = '你好 👋'
+Content = '关于 AI、社会与商业的观察和思考。'
+
+[[params.socialIcons]]
+name = 'GitHub'
+url = 'https://github.com/xiaogongzhuuu'
+
+[[menu.main]]
+name = '归档'
+url = '/archives/'
+weight = 10
+
+[[menu.main]]
+name = '标签'
+url = '/tags/'
+weight = 20
+
+[[menu.main]]
+name = '关于'
+url = '/about/'
+weight = 30
