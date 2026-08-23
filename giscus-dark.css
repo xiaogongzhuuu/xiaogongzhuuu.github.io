@@ -1,0 +1,56 @@
+/* giscus 暗色主题:对齐 PaperMod 暗色配色,强调色用红薯红(亮一档) */
+main {
+  --color-canvas-default: rgb(29, 30, 32);
+  --color-canvas-overlay: rgb(46, 46, 51);
+  --color-canvas-inset: rgb(55, 56, 62);
+  --color-canvas-subtle: rgb(46, 46, 51);
+  --color-fg-default: rgb(218, 218, 219);
+  --color-fg-muted: rgb(155, 156, 157);
+  --color-fg-subtle: rgb(155, 156, 157);
+  --color-border-default: rgb(51, 51, 51);
+  --color-border-muted: rgb(51, 51, 51);
+  --color-neutral-muted: rgba(65, 66, 68, 0.4);
+  --color-btn-text: rgb(218, 218, 219);
+  --color-btn-bg: rgb(46, 46, 51);
+  --color-btn-border: rgb(51, 51, 51);
+  --color-btn-hover-bg: rgb(55, 56, 62);
+  --color-btn-hover-border: rgb(65, 66, 68);
+  --color-btn-active-bg: rgb(55, 56, 62);
+  --color-btn-active-border: rgb(65, 66, 68);
+  --color-btn-selected-bg: rgb(55, 56, 62);
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: #e16a7d;
+  --color-btn-primary-border: #e16a7d;
+  --color-btn-primary-hover-bg: #d15367;
+  --color-btn-primary-hover-border: #d15367;
+  --color-btn-primary-selected-bg: #d15367;
+  --color-btn-primary-disabled-text: rgba(255, 255, 255, 0.5);
+  --color-btn-primary-disabled-bg: rgba(225, 106, 125, 0.6);
+  --color-btn-primary-disabled-border: transparent;
+  --color-accent-fg: #e16a7d;
+  --color-accent-emphasis: #e16a7d;
+  --color-accent-muted: rgba(225, 106, 125, 0.4);
+  --color-accent-subtle: rgba(225, 106, 125, 0.12);
+  --color-success-fg: #57ab5a;
+  --color-attention-fg: #c69026;
+  --color-attention-muted: rgba(174, 124, 20, 0.4);
+  --color-attention-subtle: rgba(174, 124, 20, 0.15);
+  --color-danger-fg: #e5534b;
+  --color-danger-muted: rgba(229, 83, 75, 0.4);
+  --color-danger-subtle: rgba(229, 83, 75, 0.1);
+  --color-social-reaction-bg-hover: rgb(51, 51, 51);
+  --color-social-reaction-bg-reacted-hover: rgba(225, 106, 125, 0.2);
+}
+
+/* 与 PaperMod 对齐的细节:圆角 8px、聚焦态用强调色 */
+main .gsc-comment-box textarea,
+main .Btn {
+  border-radius: 8px;
+}
+main .gsc-comment-box textarea:focus {
+  border-color: var(--color-accent-fg);
+  box-shadow: 0 0 0 3px var(--color-accent-subtle);
+}
+main .gsc-comment-box .Btn-primary {
+  border-radius: 8px;
+}
