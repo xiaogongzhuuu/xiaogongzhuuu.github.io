@@ -48,8 +48,8 @@ main .Btn {
   border-radius: 8px;
 }
 main .gsc-comment-box textarea:focus {
-  border-color: var(--color-accent-fg);
-  box-shadow: 0 0 0 3px var(--color-accent-subtle);
+  border-color: var(--color-border-default);
+  box-shadow: 0 0 0 3px var(--color-neutral-muted);
 }
 main .gsc-comment-box .Btn-primary {
   border-radius: 8px;
