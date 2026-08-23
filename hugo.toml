@@ -38,10 +38,10 @@ url = 'https://www.xiaohongshu.com/user/profile/6301d55f0000000012001c6a'
 enabled = true
 repo = 'xiaogongzhuuu/xiaogongzhuuu.github.io'
 repoID = 'R_kgDOUAuxFw'
-category = 'General'
-categoryID = 'DIC_kwDOUAuxF84DD_JV'
+category = 'Announcements'
+categoryID = 'DIC_kwDOUAuxF84DD_JU'
 mapping = 'specific'
-term = '碎碎念'
+term = '发帖'
 lang = 'zh-CN'
 
 [[menu.main]]
