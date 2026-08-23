@@ -2,11 +2,12 @@
 <script>
 (function () {
   // 在 giscus 脚本执行前,按 PaperMod 当前主题设置对应的自定义主题
+  // 注意:本版 PaperMod 用 html 的 data-theme 属性表示明暗,不是 class
   var light = 'https://xiaogongzhuuu.github.io/giscus-light.css';
   var dark = 'https://xiaogongzhuuu.github.io/giscus-dark.css';
   var s = document.getElementById('giscus-script');
   if (s) {
-    s.dataset.theme = document.documentElement.classList.contains('dark') ? dark : light;
+    s.dataset.theme = document.documentElement.dataset.theme === 'dark' ? dark : light;
   }
 })();
 </script>
@@ -32,7 +33,7 @@
   var light = 'https://xiaogongzhuuu.github.io/giscus-light.css';
   var dark = 'https://xiaogongzhuuu.github.io/giscus-dark.css';
   function isDark() {
-    return document.documentElement.classList.contains('dark');
+    return document.documentElement.dataset.theme === 'dark';
   }
   function sync() {
     var frame = document.querySelector('iframe.giscus-frame');
@@ -43,8 +44,9 @@
       );
     }
   }
-  // 跟随 PaperMod 主题切换(改类名或改本地存储都触发)
-  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  // 跟随 PaperMod 主题切换:监听 html 的 data-theme 属性变化
+  // (同时监听 class 兼容旧版 PaperMod 的切换方式)
+  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class'] });
   window.addEventListener('storage', sync);
   window.addEventListener('load', function () { setTimeout(sync, 600); });
 })();
