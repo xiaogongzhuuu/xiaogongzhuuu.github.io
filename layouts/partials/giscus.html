@@ -1,0 +1,34 @@
+<div class="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="{{ site.Params.giscus.repo }}"
+        data-repo-id="{{ site.Params.giscus.repoID }}"
+        data-category="{{ site.Params.giscus.category }}"
+        data-category-id="{{ site.Params.giscus.categoryID }}"
+        data-mapping="{{ site.Params.giscus.mapping }}"
+        data-term="{{ site.Params.giscus.term }}"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="{{ site.Params.giscus.lang }}"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+(function () {
+  function theme() {
+    return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
+  function sync() {
+    var frame = document.querySelector('iframe.giscus-frame');
+    if (frame) {
+      frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme() } } }, 'https://giscus.app');
+    }
+  }
+  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  window.addEventListener('storage', sync);
+  window.addEventListener('load', function () { setTimeout(sync, 600); });
+})();
+</script>

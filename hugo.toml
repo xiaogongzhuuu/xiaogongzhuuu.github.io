@@ -34,6 +34,16 @@ url = 'https://github.com/xiaogongzhuuu'
 name = '小红书'
 url = 'https://www.xiaohongshu.com/user/profile/6301d55f0000000012001c6a'
 
+[params.giscus]
+enabled = true
+repo = 'xiaogongzhuuu/xiaogongzhuuu.github.io'
+repoID = 'R_kgDOUAuxFw'
+category = 'General'
+categoryID = 'DIC_kwDOUAuxF84DD_JV'
+mapping = 'specific'
+term = '碎碎念'
+lang = 'zh-CN'
+
 [[menu.main]]
 name = '归档'
 url = '/archives/'
