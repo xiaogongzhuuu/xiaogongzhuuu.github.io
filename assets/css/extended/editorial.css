@@ -1,0 +1,156 @@
+:root {
+  --theme: #f7f4ed;
+  --entry: #fcfaf6;
+  --primary: #252a28;
+  --secondary: #737973;
+  --tertiary: #ece8df;
+  --content: #303532;
+  --border: #dfdbd1;
+  --code-bg: #eeeae1;
+  --radius: 8px;
+}
+
+.logo a,
+.home-info .entry-header h1,
+.post-title,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.page-header h1 {
+  font-family: Georgia, "Songti SC", "STSong", serif;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+
+.home-info {
+  min-height: 214px;
+  display: flex;
+  align-items: flex-end;
+  padding: 3.2rem 0 2.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-info .entry-header h1 {
+  max-width: 680px;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  line-height: 1.08;
+}
+
+.home-info .entry-content {
+  max-width: 540px;
+  margin-top: 1rem;
+  color: var(--secondary);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.editorial-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 2.2rem 0 .9rem;
+}
+
+.editorial-intro span,
+.section-label {
+  color: #68796d;
+  font-size: .73rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.editorial-intro p {
+  margin: 0;
+  color: var(--secondary);
+  font-size: .88rem;
+  text-align: right;
+}
+
+.post-entry {
+  margin-bottom: .8rem;
+  padding: 1.35rem 1.45rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  box-shadow: none;
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.post-entry:hover {
+  background: var(--entry);
+  border-color: var(--border);
+  transform: translateY(-1px);
+}
+
+.post-entry .entry-header h2 {
+  font-family: Georgia, "Songti SC", "STSong", serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.32;
+}
+
+.post-entry .entry-content {
+  color: var(--secondary);
+  line-height: 1.8;
+}
+
+.giscus-home {
+  margin: 1.4rem 0 2.6rem;
+  padding: 1.6rem 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #f3f0e8;
+}
+
+.publish-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.publish-heading h2 {
+  margin: .35rem 0;
+  font-family: Georgia, "Songti SC", "STSong", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.publish-heading p {
+  max-width: 540px;
+  margin: 0;
+  color: var(--secondary);
+  font-size: .9rem;
+}
+
+.publish-heading > a {
+  flex: none;
+  color: var(--secondary);
+  font-size: .84rem;
+}
+
+.post-content {
+  font-size: 1.06rem;
+  line-height: 2;
+}
+
+.post-content blockquote {
+  border-color: #829482;
+  color: #515c55;
+  font-style: normal;
+}
+
+.post-content a {
+  color: #3f6754;
+}
+
+@media (max-width: 600px) {
+  .home-info { min-height: 180px; padding: 2.4rem 0 1.8rem; }
+  .editorial-intro,
+  .publish-heading { display: block; }
+  .editorial-intro p { margin-top: .5rem; text-align: left; }
+  .publish-heading > a { display: inline-block; margin-top: 1rem; }
+  .giscus-home { padding: 1.25rem; }
+  .post-entry { padding: 1.15rem; }
+}

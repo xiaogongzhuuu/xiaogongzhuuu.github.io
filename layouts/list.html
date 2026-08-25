@@ -51,6 +51,27 @@
 {{- partial "home_info.html" . }}
 {{- end }}
 
+{{- if .IsHome }}
+<section class="editorial-intro" aria-label="文章列表说明">
+  <span>最近写下</span>
+  <p>关于人、技术、秩序，以及时代变化里那些不容易被说清的感受。</p>
+</section>
+
+{{- if site.Params.giscus.enabled }}
+<section id="发帖" class="giscus-home">
+  <div class="publish-heading">
+    <div>
+      <span class="section-label">即时记录</span>
+      <h2>发帖</h2>
+      <p>短一点的想法可以直接写在这里。此栏目仅博主可发布，访客可以浏览。</p>
+    </div>
+    <a href="https://github.com/xiaogongzhuuu/xiaogongzhuuu.github.io/discussions/1" target="_blank" rel="noopener">管理帖子 →</a>
+  </div>
+  {{ partial "giscus.html" . }}
+</section>
+{{- end }}
+{{- end }}
+
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
 
@@ -114,16 +135,6 @@
     {{- end }}
   </nav>
 </footer>
-{{- end }}
-
-{{- if .IsHome }}
-{{- if site.Params.giscus.enabled }}
-<section class="giscus-home">
-  <h2>发帖</h2>
-  <p>此栏目只有博主可以发帖,访客可浏览 · <a href="https://github.com/xiaogongzhuuu/xiaogongzhuuu.github.io/discussions/1" target="_blank" rel="noopener">管理帖子</a></p>
-  {{ partial "giscus.html" . }}
-</section>
-{{- end }}
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}
