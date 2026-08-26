@@ -1,63 +1,17 @@
 {{- define "main" }}
-<section class="home-hero">
-  <p class="home-kicker">一只老红薯的个人写作</p>
-  <h1>在变化的时代里，<br>理解技术，也理解人。</h1>
-  <p class="home-lead">记录 AI、社会与商业交叉处的观察。关心系统如何运转，也关心身处其中的人如何选择。</p>
-  <div class="home-actions">
-    <a class="home-primary" href="{{ "posts/" | relLangURL }}">阅读文章</a>
-    <a class="home-secondary" href="{{ "about/" | relLangURL }}">关于我</a>
+<section class="identity-home">
+  <div class="identity-mark" aria-hidden="true">薯</div>
+  <p class="identity-eyebrow">PERSONAL WEBSITE · EST. 2026</p>
+  <h1>一只老红薯</h1>
+  <p class="identity-meta">小红书号：2926705234 <span>·</span> IP 属地：上海</p>
+  <p class="identity-description">探索 AI 浪潮中的人性、秩序与未来。</p>
+  <div class="identity-links">
+    <a class="identity-primary" href="https://www.xiaohongshu.com/user/profile/6301d55f0000000012001c6a" target="_blank" rel="noopener">在小红书找到我</a>
+    <a href="{{ "about/" | relLangURL }}">关于本站</a>
   </div>
 </section>
-
-<section class="home-section home-topics" aria-labelledby="topics-title">
-  <header class="section-heading">
-    <p>写作坐标</p>
-    <h2 id="topics-title">我持续关心的三个方向</h2>
-  </header>
-  <div class="topic-grid">
-    <article><span>01</span><h3>人与系统</h3><p>教育、制度与市场，如何塑造个人的处境和选择。</p></article>
-    <article><span>02</span><h3>AI 与时代</h3><p>技术浪潮如何进入产业，并重新定义工作与创造。</p></article>
-    <article><span>03</span><h3>成长与关系</h3><p>离开少年时代之后，对自己、他人与世界的重新理解。</p></article>
-  </div>
-</section>
-
-{{- $posts := where site.RegularPages "Section" "posts" }}
-<section class="home-section" aria-labelledby="posts-title">
-  <header class="section-heading section-heading-row">
-    <div><p>长文</p><h2 id="posts-title">最近写下</h2></div>
-    <a href="{{ "posts/" | relLangURL }}">全部文章 →</a>
-  </header>
-  <div class="home-post-list">
-    {{- range first 4 $posts }}
-    <article class="home-post">
-      <a href="{{ .RelPermalink }}">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
-        <div><h3>{{ .Title }}</h3><p>{{ .Description | default (.Summary | plainify | truncate 110) }}</p></div>
-        <span aria-hidden="true">↗</span>
-      </a>
-    </article>
-    {{- else }}
-    <p class="empty-state">第一篇正式文章正在路上。</p>
-    {{- end }}
-  </div>
-</section>
-
-{{- $notes := where site.RegularPages "Section" "notes" }}
-<section class="home-section notes-preview" aria-labelledby="notes-title">
-  <header class="section-heading section-heading-row">
-    <div><p>随想</p><h2 id="notes-title">尚在生长的念头</h2></div>
-    <a href="{{ "notes/" | relLangURL }}">全部随想 →</a>
-  </header>
-  <div class="note-grid">
-    {{- range first 3 $notes }}
-    <article class="note-card">
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006 年 1 月 2 日" }}</time>
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-      <p>{{ .Summary | plainify | truncate 100 }}</p>
-    </article>
-    {{- else }}
-    <p class="empty-state">短一点的观察，会留在这里。</p>
-    {{- end }}
-  </div>
-</section>
+<footer class="identity-footer">
+  <span>一只老红薯</span>
+  <span>网站建立中，文字慢慢来。</span>
+</footer>
 {{- end }}
