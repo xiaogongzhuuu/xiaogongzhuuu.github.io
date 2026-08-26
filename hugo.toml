@@ -51,3 +51,13 @@ category = 'Announcements'
 categoryID = 'DIC_kwDOUAuxF84DD_JU'
 mapping = 'pathname'
 lang = 'zh-CN'
+
+[[menu.main]]
+name = '博客'
+url = '/blog/'
+weight = 10
+
+[[menu.main]]
+name = '关于'
+url = '/about/'
+weight = 20
