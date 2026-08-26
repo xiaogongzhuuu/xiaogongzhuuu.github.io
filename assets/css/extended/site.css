@@ -64,13 +64,6 @@ body { font-family: "Songti SC", "STSong", Georgia, serif; }
   letter-spacing: .035em;
 }
 
-.home-meta {
-  margin: .85rem 0 0;
-  color: var(--secondary);
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: .78rem;
-}
-
 .home-links { display: flex; gap: 1.3rem; margin-top: 2.2rem; }
 .home-links a { border-bottom: 1px solid var(--border); padding-bottom: .2rem; font-size: .88rem; }
 .home-links a:hover { border-color: var(--primary); }
