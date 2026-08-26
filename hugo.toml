@@ -31,7 +31,10 @@ ShowToc = true
 [params.assets]
 theme_color = '#ffffff'
 favicon = '/avatar.jpg'
+favicon16x16 = '/avatar.jpg'
+favicon32x32 = '/avatar.jpg'
 apple_touch_icon = '/avatar.jpg'
+safari_pinned_tab = '/avatar.jpg'
 
 [params.homeInfoParams]
 Title = '一只老红薯'
