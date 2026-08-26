@@ -30,6 +30,8 @@ ShowToc = true
 
 [params.assets]
 theme_color = '#ffffff'
+favicon = '/avatar.jpg'
+apple_touch_icon = '/avatar.jpg'
 
 [params.homeInfoParams]
 Title = '一只老红薯'
