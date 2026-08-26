@@ -1,95 +1,51 @@
 :root {
-  --theme: #f4f0e7;
-  --entry: #faf7f0;
-  --primary: #24231f;
-  --secondary: #777168;
-  --tertiary: #e9e3d7;
-  --content: #37342e;
-  --border: #ddd6ca;
-  --accent: #9b3f31;
-  --main-width: 860px;
+  --theme: #f5f2eb;
+  --primary: #22211e;
+  --secondary: #77736c;
+  --content: #35332e;
+  --border: #ded9cf;
 }
 
-body { font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif; }
-.nav { max-width: 1040px; }
-.main { max-width: 920px; }
-.logo a, #menu { letter-spacing: .02em; }
+body { font-family: "Songti SC", "STSong", Georgia, serif; }
+body.list .header,
+body.list > .footer { display: none; }
 
-.identity-home {
-  min-height: calc(100vh - 230px);
+.main { max-width: 920px; }
+
+.minimal-home {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 5rem 1rem 7rem;
-  text-align: center;
+  align-items: flex-start;
+  padding-bottom: 8vh;
 }
 
-.identity-mark {
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 54px;
-  margin-bottom: 2rem;
-  border: 1px solid var(--primary);
-  border-radius: 50%;
-  font-size: 1.05rem;
-}
-
-.identity-eyebrow {
-  margin: 0 0 1.2rem;
-  color: var(--secondary);
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: .67rem;
-  letter-spacing: .19em;
-}
-
-.identity-home h1 {
+.minimal-home h1 {
   margin: 0;
-  font-size: clamp(3.4rem, 10vw, 6.8rem);
+  font-size: clamp(3.5rem, 9vw, 6.6rem);
   font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -.055em;
+  line-height: 1;
+  letter-spacing: -.06em;
 }
 
-.identity-meta {
-  margin: 1.6rem 0 0;
+.minimal-home p {
+  margin: 1.7rem 0 1rem;
+  color: var(--content);
+  font-size: 1.05rem;
+  letter-spacing: .04em;
+}
+
+.minimal-home a {
   color: var(--secondary);
   font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: .82rem;
+  font-size: .76rem;
 }
 
-.identity-meta span { padding: 0 .35rem; color: var(--border); }
-.identity-description { margin: 1.25rem 0 0; font-size: 1.05rem; letter-spacing: .04em; }
-.identity-links { display: flex; gap: .75rem; margin-top: 2.5rem; }
-
-.identity-links a {
-  padding: .68rem 1.05rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: .8rem;
-}
-
-.identity-links a:hover { border-color: var(--primary); }
-.identity-links .identity-primary { border-color: var(--primary); background: var(--primary); color: var(--theme); }
-
-.identity-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.2rem 0;
-  border-top: 1px solid var(--border);
-  color: var(--secondary);
-  font-size: .75rem;
-}
-
-.post-content { font-size: 1.05rem; line-height: 2; }
+.minimal-home a:hover { color: var(--primary); }
 
 @media (max-width: 600px) {
-  .identity-home { min-height: calc(100vh - 180px); padding: 3rem 0 5rem; }
-  .identity-home h1 { font-size: clamp(3rem, 17vw, 4.7rem); }
-  .identity-meta span { display: block; height: .3rem; color: transparent; }
-  .identity-links { flex-direction: column; width: min(260px, 100%); }
-  .identity-footer { display: block; text-align: center; }
-  .identity-footer span { display: block; margin: .3rem 0; }
+  .minimal-home { padding-bottom: 4vh; }
+  .minimal-home h1 { font-size: clamp(3.2rem, 18vw, 4.8rem); }
+  .minimal-home p { max-width: 16em; line-height: 1.8; }
 }
