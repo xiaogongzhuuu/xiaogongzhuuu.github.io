@@ -4,7 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 echo "==> 构建站点..."
-hugo --gc --minify
+hugo --gc --minify --cleanDestinationDir
 
 DEPLOY_DIR="$(mktemp -d)"
 trap 'rm -rf "$DEPLOY_DIR"' EXIT
