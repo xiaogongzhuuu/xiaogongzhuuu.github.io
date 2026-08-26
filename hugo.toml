@@ -14,13 +14,22 @@ tag = 'tags'
 [params]
 env = 'production'
 description = '探索AI浪潮中的人性、秩序与未来。'
-ShowReadingTime = true
+author = '一只老红薯'
+mainSections = ['posts']
+DateFormat = '2006年1月2日'
+defaultTheme = 'light'
+disableThemeToggle = true
+ShowReadingTime = false
 ShowShareButtons = true
+ShareButtons = ['x', 'telegram']
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
-ShowWordCount = true
+ShowWordCount = false
 ShowToc = true
+
+[params.assets]
+theme_color = '#ffffff'
 
 [params.homeInfoParams]
 Title = '一只老红薯'
@@ -40,26 +49,25 @@ repo = 'xiaogongzhuuu/xiaogongzhuuu.github.io'
 repoID = 'R_kgDOUAuxFw'
 category = 'Announcements'
 categoryID = 'DIC_kwDOUAuxF84DD_JU'
-mapping = 'specific'
-term = '发帖'
+mapping = 'pathname'
 lang = 'zh-CN'
 
 [[menu.main]]
-name = '发帖'
-url = '/#发帖'
-weight = 5
+name = '文章'
+url = '/posts/'
+weight = 10
+
+[[menu.main]]
+name = '随想'
+url = '/notes/'
+weight = 20
 
 [[menu.main]]
 name = '归档'
 url = '/archives/'
-weight = 10
-
-[[menu.main]]
-name = '标签'
-url = '/tags/'
-weight = 20
+weight = 30
 
 [[menu.main]]
 name = '关于'
 url = '/about/'
-weight = 30
+weight = 40

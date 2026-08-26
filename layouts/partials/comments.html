@@ -1,0 +1,9 @@
+{{- if site.Params.giscus.enabled }}
+<section class="comments" aria-label="评论">
+  <header class="comments-heading">
+    <p>回应</p>
+    <h2>留下你的想法</h2>
+  </header>
+  {{ partial "giscus.html" . }}
+</section>
+{{- end }}

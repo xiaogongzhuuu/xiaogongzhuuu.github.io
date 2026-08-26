@@ -1,55 +1,19 @@
 <div class="giscus"></div>
-<script>
-(function () {
-  // 在 giscus 脚本执行前,按 PaperMod 当前主题设置对应的自定义主题
-  // 注意:本版 PaperMod 用 html 的 data-theme 属性表示明暗,不是 class
-  var light = 'https://xiaogongzhuuu.github.io/giscus-light.css';
-  var dark = 'https://xiaogongzhuuu.github.io/giscus-dark.css';
-  var s = document.getElementById('giscus-script');
-  if (s) {
-    s.dataset.theme = document.documentElement.dataset.theme === 'dark' ? dark : light;
-  }
-})();
-</script>
 <script id="giscus-script" src="https://giscus.app/client.js"
         data-repo="{{ site.Params.giscus.repo }}"
         data-repo-id="{{ site.Params.giscus.repoID }}"
         data-category="{{ site.Params.giscus.category }}"
         data-category-id="{{ site.Params.giscus.categoryID }}"
         data-mapping="{{ site.Params.giscus.mapping }}"
-        data-term="{{ site.Params.giscus.term }}"
         data-strict="0"
         data-reactions-enabled="0"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="https://xiaogongzhuuu.github.io/giscus-light.css"
+        data-theme="https://xiaogongzhuuu.github.io/giscus-light.css?v=2"
         data-lang="{{ site.Params.giscus.lang }}"
         data-loading="lazy"
         crossorigin="anonymous"
         async>
-</script>
-<script>
-(function () {
-  var light = 'https://xiaogongzhuuu.github.io/giscus-light.css';
-  var dark = 'https://xiaogongzhuuu.github.io/giscus-dark.css';
-  function isDark() {
-    return document.documentElement.dataset.theme === 'dark';
-  }
-  function sync() {
-    var frame = document.querySelector('iframe.giscus-frame');
-    if (frame) {
-      frame.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: isDark() ? dark : light } } },
-        'https://giscus.app'
-      );
-    }
-  }
-  // 跟随 PaperMod 主题切换:监听 html 的 data-theme 属性变化
-  // (同时监听 class 兼容旧版 PaperMod 的切换方式)
-  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class'] });
-  window.addEventListener('storage', sync);
-  window.addEventListener('load', function () { setTimeout(sync, 600); });
-})();
 </script>
 <style>
 .giscus-home {
@@ -59,16 +23,48 @@
   padding: 1.25rem 1.5rem;
   margin: 0 0 var(--gap) 0;
 }
-.giscus-home h2 {
+.giscus-home-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.giscus-home-head h2 {
   font-size: 1.4rem;
   margin: 0 0 0.25rem;
 }
-.giscus-home p {
+.giscus-home-head p {
   color: var(--secondary);
   font-size: 0.92rem;
-  margin: 0 0 1rem;
+  margin: 0;
 }
-.giscus-home p a {
-  box-shadow: 0 1px 0 var(--secondary);
+.giscus-home-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.giscus-badge {
+  font-size: 0.78rem;
+  color: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  background: var(--code-bg);
+  white-space: nowrap;
+}
+.giscus-manage {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.giscus-manage:hover {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 </style>

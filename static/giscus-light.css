@@ -48,8 +48,15 @@ main .Btn {
   border-radius: 8px;
 }
 main .gsc-comment-box textarea:focus {
-  border-color: var(--color-accent-fg);
-  box-shadow: 0 0 0 3px var(--color-accent-subtle);
+  border-color: var(--color-border-default);
+  box-shadow: 0 0 0 3px var(--color-neutral-muted);
+}
+
+/* giscus 基础样式的 :focus-within 会给评论框套上 accent 色的红框,这里覆盖成中性灰 */
+main .gsc-comment-box-write:focus-within,
+main .form-control:focus {
+  border-color: var(--color-border-default);
+  box-shadow: 0 0 0 2px var(--color-neutral-muted);
 }
 main .gsc-comment-box .Btn-primary {
   border-radius: 8px;

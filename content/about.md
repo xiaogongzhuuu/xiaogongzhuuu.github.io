@@ -4,13 +4,17 @@ date = '2026-08-22T00:00:00+08:00'
 draft = false
 +++
 
-你好,我是一只老红薯。
+你好，我是一只老红薯。
 
-AI 专业背景。比起单个事件,我对「世界如何运行」更感兴趣——关心 AI 如何改变产业结构与工作方式,以及技术浪潮中人的位置。
+我正在学习 AI，也在学习如何理解这个迅速变化的世界。
 
-这个博客记录我在技术、商业与社会交叉处的观察与思考,大部分时候从一个问题开始:为什么。
+比起单个事件，我对「世界如何运行」更感兴趣：技术怎样改变产业结构与工作方式，系统如何影响个人的处境，以及身处浪潮中的人可以怎样选择。
+
+这个博客记录我在技术、商业与社会交叉处的观察。长文用来整理相对完整的思考，随想则收留那些尚未成为结论、但值得被留下的念头。
+
+大部分写作，都从一个问题开始：为什么？
 
 ## 找到我
 
-- 小红书: [一只老红薯](https://www.xiaohongshu.com/user/profile/6301d55f0000000012001c6a)
-- GitHub: [github.com/xiaogongzhuuu](https://github.com/xiaogongzhuuu)
+- 小红书：[一只老红薯](https://www.xiaohongshu.com/user/profile/6301d55f0000000012001c6a)
+- GitHub：[github.com/xiaogongzhuuu](https://github.com/xiaogongzhuuu)
