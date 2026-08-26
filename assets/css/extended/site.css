@@ -18,11 +18,11 @@ body { font-family: "Songti SC", "STSong", Georgia, serif; }
 #menu { font-size: .88rem; }
 
 .home-intro {
-  min-height: 58vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5.5rem 0 4.5rem;
+  padding: 4.5rem 0 3.8rem;
 }
 
 .home-label,
@@ -37,7 +37,7 @@ body { font-family: "Songti SC", "STSong", Georgia, serif; }
 
 .home-intro h1 {
   margin: 0;
-  font-size: clamp(4rem, 10vw, 7rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -.06em;
@@ -94,8 +94,8 @@ body { font-family: "Songti SC", "STSong", Georgia, serif; }
 .post-content { font-size: 1.05rem; line-height: 2; }
 
 @media (max-width: 600px) {
-  .home-intro { min-height: 55vh; padding: 4rem 0 3.5rem; }
-  .home-intro h1 { font-size: clamp(3.5rem, 18vw, 5rem); }
+  .home-intro { min-height: 48vh; padding: 3.5rem 0 3rem; }
+  .home-intro h1 { font-size: clamp(2.9rem, 15vw, 4.1rem); }
   .home-description { max-width: 17em; line-height: 1.8; }
   .empty-writing { align-items: flex-start; flex-direction: column; gap: 1.2rem; }
 }
